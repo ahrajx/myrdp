@@ -7,9 +7,13 @@ defaults:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-11
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - name: Build
+        run: swift build
+      - name: Run tests
+        run: swift test
     - name: Setting the Environment Up.
       env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
