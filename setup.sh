@@ -1,8 +1,5 @@
 #setup.sh VNC_USER_PASSWORD VNC_PASSWORD NGROK_AUTH_TOKEN
 
-#disable spotlight indexing
-sudo mdutil -i off -a
-
 #Create new account
 sudo dscl . -create /Users/ahraj
 sudo dscl . -create /Users/ahraj UserShell /bin/bash
